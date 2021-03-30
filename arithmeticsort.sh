@@ -40,3 +40,17 @@ do
 	done
 done
 echo "Descending Order= (${Arr[@]})"
+
+for ((i=0;i<3;i++))
+do
+   for ((j=i+1;j<3;j++))
+   do
+      if [ ${Arr[i]} -gt ${Arr[j]} ]
+      then
+         temp=${Arr[i]}
+         Arr[$i]=${Arr[j]}
+         Arr[$j]=$temp
+      fi
+   done
+done
+echo "Ascending Order= (${Arr[@]})"
