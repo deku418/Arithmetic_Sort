@@ -15,3 +15,8 @@ result3=$((c+a/b))
 echo "$c+$a/$b =$result3"
 result4=$((a%b+c))
 echo "$a%$b+$c =$result4"
+
+DICT[result1]=$result1
+DICT[result2]=$result2
+DICT[result3]=$result3
+DICT[result4]=$result4
