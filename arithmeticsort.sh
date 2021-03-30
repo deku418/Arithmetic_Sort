@@ -26,3 +26,17 @@ Arr[1]=${DICT[result2]}
 Arr[2]=${DICT[result3]}
 Arr[3]=${DICT[result4]}
 echo "Array=(${Arr[@]})"
+
+for ((i=0;i<3;i++))
+do
+	for ((j=i+1;j<3;j++))
+	do
+		if [ ${Arr[i]} -lt ${Arr[j]} ]
+		then
+			temp=${Arr[i]}
+			Arr[$i]=${Arr[j]}
+			Arr[$j]=$temp
+		fi
+	done
+done
+echo "Descending Order= (${Arr[@]})"
